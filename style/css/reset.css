@@ -15,6 +15,6 @@ q:before, q:after { content:''}
 
 /* Global reset-RESET */
 /* The below restores some sensible defaults */
-strong { font-weight: bold }
-em { font-style: italic }
+strong { font-weight:bold }
+em { font-style:italic }
 a img { border:none } /* Gets rid of IE's blue borders */
