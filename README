@@ -12,11 +12,26 @@
 	version of the 'default' theme.
 
 	Best of all: it's free and fully GPL-licensed, 
-	so you can use it for whatever you like Ñ even 
+	so you can use it for whatever you like - even 
 	your commercial projects.
 
 	For full details, and for instructions, please see:
 	http://elliotjaystocks.com/starkers/
+
+	- - - - - - - - - - - - - - - - - - - - - - -
+
+	Version 2.8.2, revision 1, updated 23.07.2009
+
+	Corrected: closing </div> tag in comments.php on line 87
+
+	- - - - - - - - - - - - - - - - - - - - - - -
+
+	Version 2.8.2 for WP2.8.2, updated 21.07.2009
+
+	Removed: Extra '>' in comments.php on line 50
+	Changed: Commented out 'div, ul, li { position:relative }' in layout.css
+	Added: GPL License included as '_LICENSE.txt'
+	Renamed: 'READ_ME.txt' becomes '_READ_ME.txt'
 
 	- - - - - - - - - - - - - - - - - - - - - - -
 
