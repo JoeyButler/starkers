@@ -1,15 +1,33 @@
 <?php
 /**
+ * The template for displaying the footer.
+ *
+ * Contains the closing of the id=main div and all content
+ * after.  Calls sidebar-footer.php for bottom widgets.
+ *
  * @package WordPress
  * @subpackage Starkers
+ * @since Starkers 3.0
  */
 ?>
 
-		<!-- If you'd like to support WordPress, having the "powered by" link somewhere on your blog is the best way; it's our only promotion or advertising. -->
-		<p><?php bloginfo('name'); ?> is proudly powered by <a href="http://wordpress.org/">WordPress <?php bloginfo('version'); ?></a> <a href="<?php bloginfo('rss2_url'); ?>">Entries (RSS)</a> <a href="<?php bloginfo('comments_rss2_url'); ?>">Comments (RSS)</a>. <!-- <?php echo get_num_queries(); ?> queries. <?php timer_stop(1); ?> seconds. --></p>
-		
-		<?php wp_footer(); ?>
+<?php
+	/* A sidebar in the footer? Yep. You can can customize
+	 * your footer with four columns of widgets.
+	 */
+	get_sidebar( 'footer' );
+?>
 
-	</body>
+			<a href="<?php echo home_url( '/' ) ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+			<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform" rel="generator">Proudly powered by WordPress </a>
 
+<?php
+	/* Always have wp_footer() just before the closing </body>
+	 * tag of your theme, or you will break many plugins, which
+	 * generally use this hook to reference JavaScript files.
+	 */
+
+	wp_footer();
+?>
+</body>
 </html>
