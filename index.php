@@ -19,8 +19,10 @@ get_header(); ?>
 
 	<?php endwhile; ?>
 
-	<?php next_posts_link('&laquo; Older Entries') ?> | <?php previous_posts_link('Newer Entries &raquo;') ?>
-
+	<?php if (next_posts_link() || previous_posts_link()): ?>
+		<?php next_posts_link('&laquo; Older Entries') ?> | <?php previous_posts_link('Newer Entries &raquo;') ?>
+	<?php endif ?>
+	
 <?php else : ?>
 
 	<h2>Not Found</h2>
