@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage Starkers
- * @since Starkers 3.0
+ * @since Starkers 3.1
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -41,11 +41,11 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-	<h1>
-		<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-	</h1>
-	<p><?php bloginfo( 'description' ); ?></p>
+                <?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
+				<<?php echo $heading_tag; ?> id="site-title">
+					<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				</<?php echo $heading_tag; ?>>
+				<p><?php bloginfo( 'description' ); ?></p>
 
 	<div id="access" role="navigation">
 	  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>

@@ -9,20 +9,17 @@
  *
  * @package WordPress
  * @subpackage Starkers
- * @since Starkers 3.0
+ * @since Starkers 3.1
  */
 
 get_header(); ?>
 
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
-				<h1><?php the_title(); ?></h1>
-				<?php the_content(); ?>
-				<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
-				<?php edit_post_link( __( 'Edit', 'twentyten' ), '', '' ); ?>
-
-				<?php comments_template( '', true ); ?>
-
-<?php endwhile; ?>
+            <?php
+			/* Run the loop to output the page.
+			 * If you want to overload this in a child theme then include a file
+			 * called loop-page.php and that will be used instead.
+			 */
+			 get_template_part( 'loop', 'page' );
+			?>
 
 <?php get_footer(); ?>

@@ -10,7 +10,7 @@
  *
  * @package WordPress
  * @subpackage Starkers
- * @since Starkers 3.0
+ * @since Starkers 3.1
  */
 
 get_header(); ?>
